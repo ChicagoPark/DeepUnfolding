@@ -4,17 +4,15 @@
 Done | PLAN
 :--------------- | :--------------- 
 Done   | Check the generated dataset from DeCoLearn
-2   | Check the size of the tensor of generated dataset
-3   | Plan how to compose dataset inside
-4   | Separate Directory for Multi-coli system
-4-1 | 
-5   | Visualize 
+Done   | Check the size of the tensor of generated dataset
+Done      | Plan how to compose dataset inside
+4      | Separate Directory for Multi-coli system
+4-1    | 
+5      | Visualize 
      
 
 
-
-
-[DeCoLearn dataset organization]
+[Original DeCoLearn dataset organization]
 
 source_h5  	      
 :---------------: 
@@ -42,8 +40,8 @@ moved_y_tran_warped_truth
 [Planned dataset organization]
 source_h5  	      
 :---------------: 
-x (trnOrg) 
-s (trnCsm)
+x (trnOrg + tstOrg) 
+s (trnCsm + tstOrg)
 
 alignment_h5  	      
 :---------------: 
