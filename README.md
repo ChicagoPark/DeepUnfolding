@@ -90,6 +90,7 @@ Dimentia
 Question
 1. How do you know to use the code below to visualize MRI image at the super first time.
 2. Tip in large scale code
+3. Reason of the batch size 1
 
 ```python
 to_tiff(torch.sqrt(moved_x[:, 0] ** 2 + moved_x[:, 1] ** 2), path=alignment_qc + 'moved_x.tiff',
