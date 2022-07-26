@@ -82,6 +82,9 @@ x = torch.abs(x)
 x = (x - torch.min(x)) / (torch.max(x) - torch.min(x))
 ```
 
+Mistake
+1. Put measurement y into the CNN (I should have put measurement y into loss function but it was my mistake.)
+
 Dimentia
 1. to_tiff is visualiation method
 2. numpy.imag(val) return imaginary part of complex value.
@@ -93,6 +96,7 @@ Question
 3. Reason of the batch size 1
 4. How do you train deep learning model. Do you use your own GPU or Colab?
 5. Why did you multiply mask before estimating loss function?
+6. models - learning figures from Kamilov lecture
 
 ```python
 to_tiff(torch.sqrt(moved_x[:, 0] ** 2 + moved_x[:, 1] ** 2), path=alignment_qc + 'moved_x.tiff',
