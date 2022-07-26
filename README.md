@@ -92,6 +92,7 @@ Question
 2. Tip in large scale code
 3. Reason of the batch size 1
 4. How do you train deep learning model. Do you use your own GPU or Colab?
+5. Why did you multiply mask before estimating loss function?
 
 ```python
 to_tiff(torch.sqrt(moved_x[:, 0] ** 2 + moved_x[:, 1] ** 2), path=alignment_qc + 'moved_x.tiff',
