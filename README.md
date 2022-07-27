@@ -88,6 +88,7 @@ Mistake
 Dimentia
 1. to_tiff is visualiation method
 2. numpy.imag(val) return imaginary part of complex value.
+3. from terminal type `tensorboard --logdir=LOG_DIR`
 
 
 Question
