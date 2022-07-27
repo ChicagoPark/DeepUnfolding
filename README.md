@@ -1,92 +1,108 @@
 # DeepUnfolding
 
 
-Done | PLAN
+## `Research Big Picture`
+
+Order | Problem Solving PLAN
 :--------------- | :--------------- 
-Done   | Check the generated dataset from DeCoLearn
-Done   | Check the size of the tensor of generated dataset
-Done   | Plan how to compose dataset inside
-Done   | Create Mul_coil Dataset when users ask
-Done   | Revise DeCoLearn code to train with multiple coils
-
-
+(1)   | `Check` the created dataset(alignment.h5, mri.h5) from DeCoLearn
+(2)   | Plan how to `compose multiple coils dataset`, and code it
+(3)   | `Put Deep Unfolding Module` into DeCoLearn
+(4)   | `train` two models: EDSR DeCoLearn and Deep Unfolding DeCoLearn
+(5)   | `Revise config.json` file. I added boolean variable mul_coil.
 
 Final  | Compare between basic DeCoLearn trained with multiple coils data with unfolding DeCoLearn trained with multiple coils data
-     
+
+----
+
+## [1] `Dataset`
+
+### [1-1] `Orginal DeCoLearn Dataset Structure`
+
+`source_h5`  	     |      Shape
+:---------------:   | :---------------:
+x                   | (524, 2, 256, 232)
 
 
-[Original DeCoLearn dataset organization]
+`alignment_h5`  	     |      Shape
+:---------------:   | :---------------:
+moved_x             | (524, 2, 256, 232)
 
-source_h5  	      
-:---------------: 
-x (trnOrg + tstOrg)  
-
-alignment_h5  	      
-:---------------: 
-moved_x
-
-mri_h5  	      
-:---------------: 
-moved_x
-fixed_y
-fixed_mask
-fixed_y_tran
-moved_y
-moved_mask
-moved_y_tran
-moved_y_warped_truth
-moved_y_tran_warped_truth
+`mri_h5`  	                    |      Shape
+:---------------:             | :---------------:
+fixed_y                       |  (524, 256, 232, 2)
+fixed_mask                    |  (524, 256, 232, 2)
+moved_y                       |  (524, 256, 232, 2)
+moved_mask                    |  (524, 256, 232, 2)
+moved_y_warped_truth          |  (524, 256, 232, 2)
+fixed_y_tran                  |  (524, 2, 256, 232)
+moved_y_tran                  |  (524, 2, 256, 232)
+moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 
 > <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/180142212-3dc92e7c-7e93-4be5-876f-7a86cd8e21d6.png">
 
-[Planned dataset organization]
-source_h5  	      
-:---------------: 
-x (trnOrg + tstOrg) 
-s (trnCsm + tstOrg)
 
-alignment_h5  	      
-:---------------: 
-moved_x
+### [1-2] `Planned DU DeCoLearn Dataset Structure`
 
-mri_h5  	      
-:---------------: 
-moved_x
-fixed_y
-fixed_mask
-fixed_y_tran
-moved_y
-moved_mask
-moved_y_tran
-moved_y_warped_truth
-moved_y_tran_warped_truth
+`source_h5`  	     |      Shape
+:---------------:   | :---------------:
+x                   | (524, 2, 256, 232)
+s                   | (524, 12, 256, 232)
+
+`alignment_h5`  	|      Shape
+:---------------:   | :---------------:
+moved_x             | (524, 2, 256, 232)
 
 
+`mri_h5`  	                    |      Shape
+:---------------:             | :---------------:
+fixed_y                       |  (524, 12, 256, 232, 2)
+moved_y                       |  (524, 12, 256, 232, 2)
+moved_y_warped_truth          |  (524, 12, 256, 232, 2)               
+fixed_mask                    |  (524, 256, 232, 2)
+moved_mask                    |  (524, 256, 232, 2)
+fixed_y_tran                  |  (524, 2, 256, 232)
+moved_y_tran                  |  (524, 2, 256, 232)
+moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 
-Loss
-```python
-if module.name == 'DEQ':
-    x_hat, forward_iter, forward_res = module(x_init, P, S, y)
-else:
-    x_hat = module(x_init, P, S, y)
+## [2] `Performance`
 
-loss = loss_fn(torch.view_as_real(x_hat), torch.view_as_real(x))
+### [2-1] EDSR-based DeCoLearn Performance
 
-```
+`Zero-filled`  	                    
+:---------------:             
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219363-4ff31a80-464b-4c9c-a9db-60b0b7cb35d6.png">
 
-PSNR
-```python
-x_hat = torch.abs(x_hat)
-x_hat = (x_hat - torch.min(x_hat)) / (torch.max(x_hat) - torch.min(x_hat))
 
-x = torch.abs(x)
-x = (x - torch.min(x)) / (torch.max(x) - torch.min(x))
-```
+`EDSR-based DeCoLearn`  	                    
+:---------------:             
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219771-b7447efd-341a-457e-a059-ae22647123e8.png">
+
+
+`Groundtruth`  	                    
+:---------------:             
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219828-1735d30c-4aeb-459f-8d53-40d3ccb371c6.png">
+
+
+
+
+### [2-2] DeepUnfolding-based DeCoLearn Performance
+ 
+
+
+### `Encountered Problems`
+Prob  	                    |      Description            | Solution
+:---------------:             | :---------------:           | :---------------:
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  Even though the validation error is decent from DU, it has a dark part in model output     |
+
+
 
 Mistake
 1. Put measurement y into the CNN (I should have put measurement y into loss function but it was my mistake.)
+2. In DeCoLearn, `to_tiff` function does not have processed `post_processing` function.
+
 
 Dimentia
 1. to_tiff is visualiation method
@@ -101,6 +117,7 @@ Question
 4. How do you train deep learning model. Do you use your own GPU or Colab?
 5. Why did you multiply mask before estimating loss function?
 6. models - learning figures from Kamilov lecture
+7. 
 
 ```python
 to_tiff(torch.sqrt(moved_x[:, 0] ** 2 + moved_x[:, 1] ** 2), path=alignment_qc + 'moved_x.tiff',
