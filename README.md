@@ -5,10 +5,13 @@ Done | PLAN
 :--------------- | :--------------- 
 Done   | Check the generated dataset from DeCoLearn
 Done   | Check the size of the tensor of generated dataset
-Done      | Plan how to compose dataset inside
-4      | Separate Directory for Multi-coli system
-4-1    | 
-5      | Visualize 
+Done   | Plan how to compose dataset inside
+Done   | Create Mul_coil Dataset when users ask
+Done   | Revise DeCoLearn code to train with multiple coils
+
+
+
+Final  | Compare between basic DeCoLearn trained with multiple coils data with unfolding DeCoLearn trained with multiple coils data
      
 
 
