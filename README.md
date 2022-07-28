@@ -69,7 +69,7 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 ## [2] `Performance`
 
-### [2-1] EDSR-based DeCoLearn Performance
+### [2-1] `EDSR-based` DeCoLearn Performance
 
 `Zero-filled`  	                    
 :---------------:             
