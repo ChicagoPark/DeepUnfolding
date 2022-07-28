@@ -69,28 +69,23 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 ## [2] `Performance`
 
-### [2-1] `EDSR-based` DeCoLearn Performance
+### [2-1] `EDSR-based` DeCoLearn VS. DeepUnfolding-based DeCoLearn
 
 `Zero-filled`  	                    
 :---------------:             
 <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219363-4ff31a80-464b-4c9c-a9db-60b0b7cb35d6.png">
 
 
-`EDSR-based DeCoLearn`  	                    
-:---------------:             
-<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219771-b7447efd-341a-457e-a059-ae22647123e8.png">
+`EDSR+Registration-based DeCoLearn`  	     |      `DeepUnfolding+Registration-based DeCoLearn`
+:---------------:   | :---------------:
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219771-b7447efd-341a-457e-a059-ae22647123e8.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181482624-c75138dd-4d68-49c4-acd5-bec35b1af7b2.png">
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490046-dadf74b0-5c09-4b16-b8a1-02e2ba4e5ba2.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490035-6de57d79-dc3e-49ee-aa56-acb1474c29e6.png">
 
 
 `Groundtruth`  	                    
 :---------------:             
-<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219828-1735d30c-4aeb-459f-8d53-40d3ccb371c6.png">
+<img width="600" alt="IMG" src="">
 
-![chrome_LXguz2E1Me]()
-
-![chrome_ZQ4VE7L8iv]()
-
-
-### [2-2] DeepUnfolding-based DeCoLearn Performance
 
 
 
@@ -106,8 +101,9 @@ Lecture  	                    |      Lecture name            | Link
 
 ### [Study logs]: `Encountered Problems`
 Prob  	                    |      Description            | Solution
-:---------------:             | :---------------:           | :---------------:
-<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  Even though the validation error is decent from DU, it has a dark part in model output     |
+:---------------:             | :---------------           | :---------------
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     |
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     |
 
 
 
