@@ -85,14 +85,26 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 :---------------:             
 <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219828-1735d30c-4aeb-459f-8d53-40d3ccb371c6.png">
 
+![chrome_LXguz2E1Me]()
 
+![chrome_ZQ4VE7L8iv]()
 
 
 ### [2-2] DeepUnfolding-based DeCoLearn Performance
- 
 
 
-### `Encountered Problems`
+
+
+### [Study logs]: `Inverse Imaging Problem Study`
+Lecture  	                    |      Lecture name            | Link
+:---------------:             | :---------------:           | :---------------:
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181464871-a12adb4f-b331-4eb8-8d5e-ff90b5457110.png">                       |  Regularization by Artifact Removal (RARE): Imaging using Deep Priors Learned without Groundtruth     | https://www.youtube.com/watch?v=dOqNbsQbpxc
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181464886-a5fffb56-7af2-4556-b9d7-f3db3816755f.png">                       |  Research Seminar: "Computational Imaging" by Prof. Ulugbek Kamilov     | https://www.youtube.com/watch?v=_eAzG9mFdOw
+
+
+
+
+### [Study logs]: `Encountered Problems`
 Prob  	                    |      Description            | Solution
 :---------------:             | :---------------:           | :---------------:
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  Even though the validation error is decent from DU, it has a dark part in model output     |
