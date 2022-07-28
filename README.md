@@ -106,29 +106,18 @@ Prob  	                    |      Description            | Solution
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     |
 
 
+----
 
 Mistake
-1. Put measurement y into the CNN (I should have put measurement y into loss function but it was my mistake.)
+1. Put measurement y as a CNN input (I should have put measurement y into loss function but it was my mistake.)
 2. In DeCoLearn, `to_tiff` function does not have processed `post_processing` function.
 
 
-Dimentia
+Note
 1. to_tiff is visualiation method
 2. numpy.imag(val) return imaginary part of complex value.
 3. from terminal type `tensorboard --logdir=LOG_DIR`
 
 
-Question
-1. How do you know to use the code below to visualize MRI image at the super first time.
-2. Tip in large scale code
-3. Reason of the batch size 1
-4. How do you train deep learning model. Do you use your own GPU or Colab?
-5. Why did you multiply mask before estimating loss function?
-6. models - learning figures from Kamilov lecture
-7. 
 
-```python
-to_tiff(torch.sqrt(moved_x[:, 0] ** 2 + moved_x[:, 1] ** 2), path=alignment_qc + 'moved_x.tiff',
-                    is_normalized=False)
-```
 
