@@ -84,8 +84,7 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 `Groundtruth`  	                    
 :---------------:             
-<img width="600" alt="IMG" src="">
-
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181584656-4113a19b-ddec-4b6f-9dc2-2b6540f47d81.png">
 
 
 
