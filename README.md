@@ -79,7 +79,8 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 `EDSR+Registration-based DeCoLearn`  	     |      `DeepUnfolding+Registration-based DeCoLearn`
 :---------------:   | :---------------:
 <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219771-b7447efd-341a-457e-a059-ae22647123e8.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181482624-c75138dd-4d68-49c4-acd5-bec35b1af7b2.png">
-<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490046-dadf74b0-5c09-4b16-b8a1-02e2ba4e5ba2.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490035-6de57d79-dc3e-49ee-aa56-acb1474c29e6.png">
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020757-223e2e5e-38dc-47a1-991b-8230a44a1d7b.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490035-6de57d79-dc3e-49ee-aa56-acb1474c29e6.png">
+
 
 
 `Groundtruth`  	                    
@@ -102,10 +103,11 @@ Lecture  	                    |      Lecture name            | Link
 Prob  	                    |      Description            | Solution
 :---------------:             | :---------------           | :---------------
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     |
-<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     |
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     | I thought the problem was overfitting. Thus, I reduced the number of resblock from 13 to 6. <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020623-e3479331-a31c-4862-a63f-64720a188413.png">
 
 
 ----
+
 
 Mistake
 1. Put measurement y as a CNN input (I should have put measurement y into loss function but it was my mistake.)
