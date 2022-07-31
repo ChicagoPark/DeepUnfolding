@@ -78,9 +78,8 @@ moved_y_tran_warped_truth     |  (524, 2, 256, 232)
 
 `EDSR+Registration-based DeCoLearn`  	     |      `DeepUnfolding+Registration-based DeCoLearn`
 :---------------:   | :---------------:
-<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181219771-b7447efd-341a-457e-a059-ae22647123e8.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181482624-c75138dd-4d68-49c4-acd5-bec35b1af7b2.png">
-<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020757-223e2e5e-38dc-47a1-991b-8230a44a1d7b.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490035-6de57d79-dc3e-49ee-aa56-acb1474c29e6.png">
-
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182032836-a4c50a2c-2cf9-4f5b-a9c0-1ea1eac57c83.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181482624-c75138dd-4d68-49c4-acd5-bec35b1af7b2.png">
+<img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182032878-53485b71-4bd8-4f63-9685-4b24663ee49a.png"> | <img width="600" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490035-6de57d79-dc3e-49ee-aa56-acb1474c29e6.png">
 
 
 `Groundtruth`  	                    
@@ -95,6 +94,7 @@ Lecture  	                    |      Lecture name            | Link
 :---------------:             | :---------------:           | :---------------:
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181464871-a12adb4f-b331-4eb8-8d5e-ff90b5457110.png">                       |  Regularization by Artifact Removal (RARE): Imaging using Deep Priors Learned without Groundtruth     | https://www.youtube.com/watch?v=dOqNbsQbpxc
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181464886-a5fffb56-7af2-4556-b9d7-f3db3816755f.png">                       |  Research Seminar: "Computational Imaging" by Prof. Ulugbek Kamilov     | https://www.youtube.com/watch?v=_eAzG9mFdOw
+
 
 
 
