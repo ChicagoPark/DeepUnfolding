@@ -96,14 +96,11 @@ Lecture  	                    |      Lecture name            | Link
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181464886-a5fffb56-7af2-4556-b9d7-f3db3816755f.png">                       |  Research Seminar: "Computational Imaging" by Prof. Ulugbek Kamilov     | https://www.youtube.com/watch?v=_eAzG9mFdOw
 
 
-
-
-
 ### [Study logs]: `Encountered Problems`
 Prob  	                    |      Description            | Solution
 :---------------:             | :---------------           | :---------------
-<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     |
-<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     | I thought the problem was overfitting. Thus, I reduced the number of resblock from 13 to 6. <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020623-e3479331-a31c-4862-a63f-64720a188413.png">
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     | `With iteration of the same EDSR, but 0.1 gamma and 1 alpha solve the problem.` <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/183608743-43e1e62b-c813-4dca-a5b5-62741bc48885.png">
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     | `I thought the problem was overfitting. Thus, I reduced the number of resblock from 13 to 6.` <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020623-e3479331-a31c-4862-a63f-64720a188413.png">
 
 
 ----
