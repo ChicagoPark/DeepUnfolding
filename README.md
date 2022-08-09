@@ -99,8 +99,9 @@ Lecture  	                    |      Lecture name            | Link
 ### [Study logs]: `Encountered Problems`
 Prob  	                    |      Description            | Solution
 :---------------:             | :---------------           | :---------------
-<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     | `With iteration of the same EDSR, but 0.1 gamma and 1 alpha solve the problem.` <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/183608743-43e1e62b-c813-4dca-a5b5-62741bc48885.png">
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181216426-39097dd4-19b1-4fb2-8b18-c6fefe6f82c1.png">                       |  From DU-based DeCoLearn, even though the validation error is decent, it has a dark part in model output     | `With iteration of the same EDSR, but 0.1 gamma and 1 alpha solve the problem.` <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/183614944-4192ff95-4c34-4b81-be1c-5fbd5f0e1975.png">
 <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/181490306-76899e30-6494-4f11-8fd2-a1bdc4e463da.png">                       |  From EDSR-based DeCoLearn, training performance is also getting worse.     | `I thought the problem was overfitting. Thus, I reduced the number of resblock from 13 to 6.` <img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/182020623-e3479331-a31c-4862-a63f-64720a188413.png">
+<img width="900" alt="IMG" src="https://user-images.githubusercontent.com/73331241/183622435-2d64824c-e3c3-44bb-9c83-4ed7932723f0.png">                       |  Even though dark parts were disappear after change gamma and alpha parameter for Deep Unfolding Network, After about 40 epochs, the performance died including training one.     | `I have changed internal blocks of DU models. Previously, I used the same EDSR blocks, but I also added CNNBlock, DnCNN.`
 
 
 ----
